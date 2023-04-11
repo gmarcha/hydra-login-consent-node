@@ -11,6 +11,7 @@ import { oidcConformityMaybeFakeAcr } from "./stub/oidc-cert"
 // Sets up csrf protection
 const csrfProtection = csrf({
   cookie: {
+    domain: process.env.COOKIE_DOMAIN,
     sameSite: "lax",
   },
 })

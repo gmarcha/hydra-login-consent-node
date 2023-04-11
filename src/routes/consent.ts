@@ -12,6 +12,7 @@ import { AcceptOAuth2ConsentRequestSession } from "@ory/client"
 // Sets up csrf protection
 const csrfProtection = csrf({
   cookie: {
+    domain: process.env.COOKIE_DOMAIN,
     sameSite: "lax",
   },
 })
