@@ -13,6 +13,8 @@ const csrfProtection = csrf({
   cookie: {
     domain: process.env.COOKIE_DOMAIN,
     sameSite: "lax",
+    httpOnly: true,
+    secure: true,
   },
 })
 const router = express.Router()
